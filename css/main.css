@@ -1,0 +1,22 @@
+ .container {
+  padding: 20px;
+  
+}
+
+.container .rangeGroup{
+  display: flex;
+  flex-direction: row;
+  background-color: ghostwhite;
+}
+
+.container .rangeGroup .rangeSymbol{
+  display: block;
+  width: 80px;
+  font-size: 2em;
+}
+
+.container .rangeGroup .range{
+  flex-basis: 300px;
+  display: block;
+}
+

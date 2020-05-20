@@ -8,16 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Simulator</title>
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
     <div class="container">
-      <span class="rangeSymbol">(R) </span>
-      <input type="range" name="rangeRed" id="rangeRed" />
-      <span class="rangeSymbol">(G)</span>
-      <input type="range" name="rangeGreen" id="rangeGreen" />
-      <span class="rangeSymbol">(B)</span>
-      <input type="range" name="rangeBlue" id="rangeBlue" />
+      <div class="rangeGroup">
+        <span class="rangeSymbol">(R) </span>
+        <input class="range" type="range" name="rangeRed" id="rangeRed" />
+      </div>
+
+      <div class="rangeGroup">
+        <span class="rangeSymbol">(G)</span>
+        <input class="range" type="range" name="rangeGreen" id="rangeGreen" />
+      </div>
+
+      <div class="rangeGroup">
+        <span class="rangeSymbol">(B)</span>
+        <input class="range" type="range" name="rangeBlue" id="rangeBlue" />
+      </div>
 
       <div id="backgroundColor"></div>
     </div>
