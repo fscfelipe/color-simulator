@@ -20,3 +20,12 @@
   display: block;
 }
 
+.container #boxColor{
+  height: 100px;
+  width: 100px;
+  border-width: 1px;
+  border-style: solid;
+  margin: 20px;
+  margin-left: 200px;
+}
+

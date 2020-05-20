@@ -12,9 +12,23 @@ function startInputValues() {
 
     rangeInputBox[i].value = '0';
   }
+
+  changeBoxColor();
 }
 
 function onChangeRange(event) {
   var rangeBox = document.getElementById(event.target.id + 'Box');
   rangeBox.value = event.target.value;
+
+  changeBoxColor();
+}
+
+function changeBoxColor() {
+  var boxColor = document.getElementById('boxColor');
+
+  var red = document.getElementById('rangeRedBox').value;
+  var green = document.getElementById('rangeGreenBox').value;
+  var blue = document.getElementById('rangeBlueBox').value;
+
+  boxColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
