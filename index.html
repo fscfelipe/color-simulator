@@ -2,8 +2,25 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Simple project to work with colors" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Felipe Sobreira" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Simulator</title>
+    <link rel="stylesheet" href="./css/reset.css" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="container">
+      <span class="rangeSymbol">(R) </span>
+      <input type="range" name="rangeRed" id="rangeRed" />
+      <span class="rangeSymbol">(G)</span>
+      <input type="range" name="rangeGreen" id="rangeGreen" />
+      <span class="rangeSymbol">(B)</span>
+      <input type="range" name="rangeBlue" id="rangeBlue" />
+
+      <div id="backgroundColor"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
