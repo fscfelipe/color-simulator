@@ -2,6 +2,19 @@ body {
   margin: 3em;
 }
 
+.range {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.range:hover {
+  opacity: 1.2;
+}
+
+.noSelect{
+  user-select: none;
+}
+
 .container {
   padding: 20px;
   
@@ -10,7 +23,6 @@ body {
 .container .rangeGroup{
   display: flex;
   flex-direction: row;
-  background-color: ghostwhite;
 }
 
 .container .rangeGroup .rangeSymbol{
@@ -36,5 +48,12 @@ body {
 #titleHeader{
   font-family: 'Lucida Sans';
   font-size: 4em;
+}
+
+#rangeRedBox, 
+#rangeGreenBox, 
+#rangeBlueBox {
+  margin: 0.15em;
+  width: 3em;
 }
 
