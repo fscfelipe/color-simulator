@@ -1,10 +1,8 @@
-window.addEventListener('load', startInputValues);
+const startInputValues = function () {
+  let rangeInput = document.querySelectorAll('.range');
+  let rangeInputBox = document.querySelectorAll('.rangeBoxInput');
 
-function startInputValues() {
-  var rangeInput = document.querySelectorAll('.range');
-  var rangeInputBox = document.querySelectorAll('.rangeBoxInput');
-
-  for (var i = 0; i < rangeInput.length; i++) {
+  for (let i = 0; i < rangeInput.length; i++) {
     rangeInput[i].value = '0';
     rangeInput[i].setAttribute('max', 255);
     rangeInput[i].setAttribute('min', 0);
@@ -14,21 +12,23 @@ function startInputValues() {
   }
 
   changeBoxColor();
-}
+};
 
-function onChangeRange(event) {
-  var rangeBox = document.getElementById(event.target.id + 'Box');
+const onChangeRange = function (event) {
+  let rangeBox = document.getElementById(event.target.id + 'Box');
   rangeBox.value = event.target.value;
 
   changeBoxColor();
-}
+};
 
-function changeBoxColor() {
-  var boxColor = document.getElementById('boxColor');
+const changeBoxColor = function () {
+  let boxColor = document.getElementById('boxColor');
 
-  var red = document.getElementById('rangeRedBox').value;
-  var green = document.getElementById('rangeGreenBox').value;
-  var blue = document.getElementById('rangeBlueBox').value;
+  let red = document.getElementById('rangeRedBox').value;
+  let green = document.getElementById('rangeGreenBox').value;
+  let blue = document.getElementById('rangeBlueBox').value;
 
   boxColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-}
+};
+
+window.addEventListener('load', startInputValues);
