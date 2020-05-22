@@ -1,4 +1,8 @@
- .container {
+body {
+  margin: 3em;
+}
+
+.container {
   padding: 20px;
   
 }
@@ -27,5 +31,10 @@
   border-style: solid;
   margin: 20px;
   margin-left: 200px;
+}
+
+#titleHeader{
+  font-family: 'Lucida Sans';
+  font-size: 4em;
 }
 
