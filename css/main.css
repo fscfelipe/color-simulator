@@ -39,8 +39,6 @@ body {
 .container #boxColor{
   height: 100px;
   width: 100px;
-  border-width: 1px;
-  border-style: solid;
   margin: 20px;
   margin-left: 200px;
 }
@@ -56,4 +54,11 @@ body {
   margin: 0.15em;
   width: 3em;
 }
+
+#boxColor:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+  opacity: 0.8;
+}
+
 
