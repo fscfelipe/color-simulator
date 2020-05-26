@@ -61,4 +61,40 @@ body {
   opacity: 0.8;
 }
 
+.selectedOverlay{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color:grey;
+  border-radius: 50%;
+  display: block;
+  margin-left: 240px;
+  margin-top: -80px;
+  pointer-events: none;
+}
+
+.selectedOverlay::before {
+  position: absolute;
+  left: 0;
+  top: 48%;
+  height: 50%;
+  width: 4px;
+  background-color: white;
+  content: "";
+  transform: translateX(8px) rotate(-40deg);
+  transform-origin: left bottom;
+}
+
+.selectedOverlay::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 90%;
+  background-color: white;
+  content: "";
+  transform: translateX(10px) rotate(-50deg);
+  transform-origin: left bottom;
+}
+
 

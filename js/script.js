@@ -1,6 +1,7 @@
 const startInputValues = function () {
   let rangeInput = document.querySelectorAll('.range');
   let rangeInputBox = document.querySelectorAll('.rangeBoxInput');
+  let boxColor = document.getElementById('boxColor');
 
   for (let i = 0; i < rangeInput.length; i++) {
     rangeInput[i].value = '0';
@@ -11,6 +12,7 @@ const startInputValues = function () {
     rangeInputBox[i].value = '0';
   }
 
+  boxColor.addEventListener('click', addSelectedOverlay);
   changeBoxColor();
 };
 
@@ -29,6 +31,12 @@ const changeBoxColor = function () {
   let blue = document.getElementById('rangeBlueBox').value;
 
   boxColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+};
+
+const addSelectedOverlay = function (event) {
+  // TODO get targe position, and add dynamically to its position
+  let selected = document.getElementById('selectedOverlay');
+  selected.classList.toggle('selectedOverlay');
 };
 
 window.addEventListener('load', startInputValues);
