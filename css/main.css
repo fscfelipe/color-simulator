@@ -1,7 +1,14 @@
+/* Common */
 body {
   margin: 3em;
 }
 
+#titleHeader{
+  font-family: 'JetBrains Mono', 'monospace', 'Courier';
+  font-size: 4em;
+}
+
+/* Range color */
 .range {
   cursor: pointer;
   opacity: 0.7;
@@ -11,13 +18,13 @@ body {
   opacity: 1.2;
 }
 
+/* For Range symbol */
 .noSelect{
   user-select: none;
 }
-
+/* Container with range, box,...*/
 .container {
   padding: 20px;
-  
 }
 
 .container .rangeGroup{
@@ -43,11 +50,7 @@ body {
   margin-left: 200px;
 }
 
-#titleHeader{
-  font-family: 'Lucida Sans';
-  font-size: 4em;
-}
-
+/* input holding range value */
 #rangeRedBox, 
 #rangeGreenBox, 
 #rangeBlueBox {
@@ -55,12 +58,14 @@ body {
   width: 3em;
 }
 
+/* Box color */
 #boxColor:hover{
   cursor: pointer;
   transform: scale(1.08);
   opacity: 0.8;
 }
 
+/* Overlay for selected box color */
 .selectedOverlay{
   position: absolute;
   height: 25px;
