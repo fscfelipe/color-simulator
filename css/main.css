@@ -3,6 +3,32 @@ body {
   margin: 3em;
 }
 
+.flex{
+  display: flex;
+}
+
+.colorSelected{
+  height: 3em;
+  width: 3em;
+  border: 0.2em solid #ddd !important;
+  border-radius: 50%;
+  margin-left: 0.5em;
+}
+.selectedColorsDiv{
+  height: 3em;
+  margin-left: 5em;
+}
+
+.drawBoard{
+  height: 40em;
+  width: 50em;
+  border-style: solid;
+  border-color: black;
+  background-color: blue;
+  margin-left: 5em;
+  margin-top: 1em;
+}
+
 #titleHeader{
   font-family: 'JetBrains Mono', 'monospace', 'Courier';
   font-size: 4em;

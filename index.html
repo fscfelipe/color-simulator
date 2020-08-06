@@ -17,30 +17,44 @@
       <hr />
     </header>
 
-    <div class="container">
-      <div class="rangeGroup">
-        <span class="rangeSymbol noSelect">(R)</span>
-        <input class="range" type="range" name="rangeRed" id="rangeRed" />
-        <input type="text" class="rangeBoxInput" id="rangeRedBox" disabled />
-      </div>
+    <div class="container flex">
+      <div class="subContainerLeft">
+        <div class="rangeGroup">
+          <span class="rangeSymbol noSelect">(R)</span>
+          <input class="range" type="range" name="rangeRed" id="rangeRed" />
+          <input type="text" class="rangeBoxInput" id="rangeRedBox" disabled />
+        </div>
 
-      <div class="rangeGroup">
-        <span class="rangeSymbol noSelect">(G)</span>
-        <input class="range" type="range" name="rangeGreen" id="rangeGreen" />
-        <input type="text" class="rangeBoxInput" id="rangeGreenBox" disabled />
-      </div>
+        <div class="rangeGroup">
+          <span class="rangeSymbol noSelect">(G)</span>
+          <input class="range" type="range" name="rangeGreen" id="rangeGreen" />
+          <input
+            type="text"
+            class="rangeBoxInput"
+            id="rangeGreenBox"
+            disabled
+          />
+        </div>
 
-      <div class="rangeGroup">
-        <span class="rangeSymbol noSelect">(B)</span>
-        <input class="range" type="range" name="rangeBlue" id="rangeBlue" />
-        <input type="text" class="rangeBoxInput" id="rangeBlueBox" disabled />
-      </div>
+        <div class="rangeGroup">
+          <span class="rangeSymbol noSelect">(B)</span>
+          <input class="range" type="range" name="rangeBlue" id="rangeBlue" />
+          <input type="text" class="rangeBoxInput" id="rangeBlueBox" disabled />
+        </div>
 
-      <div class="containerBoxColor">
-        <div id="boxColor"></div>
-        <div id="selectedOverlay"></div>
+        <div class="containerBoxColor">
+          <div id="boxColor"></div>
+          <div id="selectedOverlay"></div>
+        </div>
+      </div>
+      <div class="subContainerRight">
+        <div class="selectedColorsDiv">
+          <ul id="selectedColors" class="selectedColors flex"></ul>
+        </div>
+        <div class="drawBoard"></div>
       </div>
     </div>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

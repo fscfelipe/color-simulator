@@ -17,6 +17,7 @@ const startInputValues = function () {
   }
 
   boxColor.addEventListener('click', toggleSelectedOverlay);
+  boxColor.addEventListener('click', addSelectedColor);
   changeBoxColor();
 };
 
@@ -40,10 +41,25 @@ const changeBoxColor = function () {
 };
 
 const toggleSelectedOverlay = function (event) {
-  // TODO get targe position, and add dynamically to its position
   activeBox = !activeBox;
   let selected = document.getElementById('selectedOverlay');
   selected.classList.toggle('selectedOverlay');
+};
+
+const addSelectedColor = function () {
+  //Add the color to selected colors list
+  let boxColor = document.getElementById('boxColor');
+  let colorRGB = boxColor.style.backgroundColor;
+
+  let ul = document.getElementById('selectedColors');
+  let li = document.createElement('li');
+
+  let div = document.createElement('div');
+  div.classList.add('colorSelected');
+  div.style.backgroundColor = colorRGB;
+
+  li.appendChild(div);
+  ul.appendChild(li);
 };
 
 window.addEventListener('load', startInputValues);
