@@ -13,6 +13,7 @@ body {
   border: 0.2em solid #ddd !important;
   border-radius: 50%;
   margin-left: 0.5em;
+  cursor: pointer;
 }
 .selectedColorsDiv{
   height: 3em;
@@ -20,14 +21,28 @@ body {
 }
 
 .drawBoard{
-  height: 40em;
-  width: 50em;
-  border-style: solid;
-  border-color: black;
-  background-color: blue;
+  height: 500px;
+  width: 500px;
+  cursor: pointer;
+  background-color: rgb(203, 251, 129);
   margin-left: 5em;
   margin-top: 1em;
 }
+
+.colorSelected:hover{
+  border-spacing: 1.2em;
+  border: .2em solid red !important;
+}
+
+.activeSelectedColor{
+  border-spacing: 1.2em;
+  border: .2em solid red !important;
+}
+
+#selectedColors li div:hover{
+  background-color: red;
+}
+
 
 #titleHeader{
   font-family: 'JetBrains Mono', 'monospace', 'Courier';

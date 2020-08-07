@@ -1,11 +1,13 @@
 'use strict';
 
 let activeBox = false;
+let colorSelectedToPaint = 'rgb(203, 251, 129)';
 
 const startInputValues = function () {
   let rangeInput = document.querySelectorAll('.range');
   let rangeInputBox = document.querySelectorAll('.rangeBoxInput');
   let boxColor = document.getElementById('boxColor');
+  let canvas = document.querySelector('.drawBoard');
 
   for (let i = 0; i < rangeInput.length; i++) {
     rangeInput[i].value = '0';
@@ -18,6 +20,9 @@ const startInputValues = function () {
 
   boxColor.addEventListener('click', toggleSelectedOverlay);
   boxColor.addEventListener('click', addSelectedColor);
+
+  canvas.addEventListener('click', addColorToCanvas);
+
   changeBoxColor();
 };
 
@@ -47,19 +52,44 @@ const toggleSelectedOverlay = function (event) {
 };
 
 const addSelectedColor = function () {
+  // Add limit to number of selected colors
+  let limit = document.querySelectorAll('#selectedColors li').length;
+
   //Add the color to selected colors list
-  let boxColor = document.getElementById('boxColor');
-  let colorRGB = boxColor.style.backgroundColor;
+  if (activeBox && limit < 7) {
+    let boxColor = document.getElementById('boxColor');
+    let colorRGB = boxColor.style.backgroundColor;
 
-  let ul = document.getElementById('selectedColors');
-  let li = document.createElement('li');
+    let ul = document.getElementById('selectedColors');
+    let li = document.createElement('li');
 
-  let div = document.createElement('div');
-  div.classList.add('colorSelected');
-  div.style.backgroundColor = colorRGB;
+    let div = document.createElement('div');
+    div.classList.add('colorSelected');
+    div.style.backgroundColor = colorRGB;
+    div.addEventListener('click', pickColor);
 
-  li.appendChild(div);
-  ul.appendChild(li);
+    li.appendChild(div);
+    ul.appendChild(li);
+  }
+};
+
+const pickColor = function (event) {
+  let color = document.querySelectorAll('.colorSelected');
+  let colorArray = Array.from(color);
+
+  colorArray.forEach((colorSelected) => {
+    if (colorSelected.classList.contains('activeSelectedColor'))
+      colorSelected.classList.toggle('activeSelectedColor');
+  });
+
+  event.target.classList.toggle('activeSelectedColor');
+
+  colorSelectedToPaint = event.target.style.backgroundColor;
+};
+
+const addColorToCanvas = function () {
+  let canvas = document.querySelector('.drawBoard');
+  canvas.style.backgroundColor = colorSelectedToPaint;
 };
 
 window.addEventListener('load', startInputValues);
